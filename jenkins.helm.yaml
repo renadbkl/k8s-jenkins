@@ -1,0 +1,9 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: jenkins
+  namespace: jenkins
+spec:
+  chart: stable/jenkins
+  targetNamespace: jenkins
+
