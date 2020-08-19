@@ -2,7 +2,7 @@
 ## Configured for K3D using the jenkinsci/blueocean image.
 
 Run the `jenkins.sh` script, and that should do everything for you. 
-Take a look at this: https://github.com/KnowledgeHut-AWS/jenkins-lab-2-packer/tree/k8s for a basic example on how to create a kubernetes pipeline. 
+Take a look at this: https://github.com/KnowledgeHut-AWS/jenkins-lab-2-packer/tree/k8s for a basic example on how to create a kubernetes pipeline. Notice that this is the `k8s` branch, not `master`.
 
 
 Note: the lab exercise is to get that packer repo actually working -- it's close, but not fully there yet.
