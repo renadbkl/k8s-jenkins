@@ -6,4 +6,8 @@ metadata:
 spec:
   chart: stable/jenkins
   targetNamespace: jenkins
-
+  valuesContent: |-
+    master:
+      image: jenkinsci/blueocean
+      tag: latest
+      serviceType: NodePort
