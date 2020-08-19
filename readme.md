@@ -6,4 +6,5 @@ Take a look at this: https://github.com/KnowledgeHut-AWS/jenkins-lab-2-packer/tr
 
 
 Note: the lab exercise is to get that packer repo actually working -- it's close, but not fully there yet.
+
 Note2: Also, try to understand the jenkins.sh script, and the associated yaml files -- they're quite interesting.
