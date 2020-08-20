@@ -1,7 +1,7 @@
 # Jenins in K8S
 ## Configured for K3D using the jenkinsci/blueocean image.
 
-Run the `jenkins.sh` script, and that should do everything for you. 
+Run the `jenkins.sh` script (`source jenkins.sh`), and that should do everything for you. 
 Take a look at this: https://github.com/KnowledgeHut-AWS/jenkins-lab-2-packer/tree/k8s for a basic example on how to create a kubernetes pipeline. Notice that this is the `k8s` branch, not `master`.
 
 
