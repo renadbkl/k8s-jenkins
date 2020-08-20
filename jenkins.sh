@@ -4,7 +4,10 @@ source <(k3d completion bash)
 source <(kubectl completion bash)
 kubectl apply -f jenkins.namespace.yaml
 kubectl apply -f jenkins.helm.yaml
-sleep 30
+WAIT=60
+echo "Sleeping for $WAIT"
+sleep $WAIT
+echo "Making progress"
 POD=$(kubectl get pods -n jenkins -o json | jq '.items[1].metadata.name' | xargs)
 echo "Jenkins credentials"
 echo username: $(kubectl -n jenkins --container jenkins exec $POD -- env | grep ADMIN_USER | sed 's/.*=//')
