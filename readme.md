@@ -14,3 +14,5 @@ Chart repo: https://github.com/helm/charts
 
 Jenkins Chart: https://github.com/helm/charts/blob/master/stable/jenkins
 
+Kubernetes Pipeline: https://www.jenkins.io/doc/pipeline/steps/kubernetes/
+
