@@ -2,3 +2,18 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: jenkins
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: dev
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: test
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: prod
