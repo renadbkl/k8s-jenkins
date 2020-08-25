@@ -7,7 +7,85 @@ spec:
   chart: stable/jenkins
   targetNamespace: jenkins
   valuesContent: |-
+    agent:
+      containerCap: 50
     master:
       image: jenkinsci/blueocean
       tag: latest
+      prometheus:
+        enabled: true
+        serviceMonitorNamespace: jenkins
+        scrapeInterval: 30s
       serviceType: NodePort
+      overwritePlugins: true
+      installPlugins: [
+        "mailer:1.32",
+        "mipeline-rest-api:2.14",
+        "pam-auth:1.6",
+        "ace-editor:1.1",
+        "bouncycastle-api:2.18",
+        "workflow-api:2.40",
+        "jdk-tool:1.4",
+        "pipeline-stage-view:2.14",
+        "jquery-detached:1.2.1",
+        "apache-httpcomponents-client-4-api:4.5.10-2.0",
+        "kubernetes-credentials:0.7.0",
+        "workflow-step-api:2.22",
+        "kubernetes:1.26.4",
+        "pipeline-input-step:2.11",
+        "credentials-binding:1.23",
+        "momentjs:1.1.1",
+        "kubernetes-client-api:4.9.2-2",
+        "pipeline-model-api:1.7.1",
+        "structs:1.20",
+        "junit:1.32",
+        "workflow-multibranch:2.22",
+        "workflow-durable-task-step:2.35",
+        "configuration-as-code:1.43",
+        "jsch:0.1.55.2",
+        "pipeline-milestone-step:1.3.1",
+        "plugin-util-api:1.2.2",
+        "pipeline-graph-analysis:1.10",
+        "pipeline-stage-tags-metadata:1.7.1",
+        "plain-credentials:1.7",
+        "git-server:1.9",
+        "pipeline-build-step:2.13",
+        "handlebars:1.1.1",
+        "variant:1.3",
+        "matrix-project:1.17",
+        "pipeline-model-extensions:1.7.1",
+        "windows-slaves:1.6",
+        "jackson2-api:2.11.2",
+        "jquery3-api:3.5.1-1",
+        "git-client:3.4.1",
+        "workflow-job:2.39",
+        "lockable-resources:2.8",
+        "credentials:2.3.12",
+        "durable-task:1.34",
+        "greenballs:1.15",
+        "trilead-api:1.0.8",
+        "script-security:1.74",
+        "workflow-support:3.5",
+        "snakeyaml-api:1.26.4",
+        "matrix-auth:2.6.2",
+        "pipeline-model-definition:1.7.1",
+        "workflow-basic-steps:2.20",
+        "ldap:1.24",
+        "workflow-cps-global-lib:2.17",
+        "command-launcher:1.4",
+        "workflow-aggregator:2.6",
+        "git:4.3.0",
+        "scm-api:2.6.3",
+        "workflow-cps:2.82",
+        "branch-api:2.5.9",
+        "display-url-api:2.3.3",
+        "ssh-credentials:1.18.1",
+        "cloudbees-folder:6.14",
+        "pipeline-stage-step:2.5",
+        "external-monitor-job:1.7",
+        "echarts-api:4.8.0-2",
+        "workflow-scm-step:2.11",
+        "authentication-tokens:1.4",
+        "antisamy-markup-formatter:2.1",
+        "ansicolor:0.7.2"
+      ]
