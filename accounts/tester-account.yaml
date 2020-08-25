@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tester-account
+  namespace: test
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tester-account
+  namespace: test
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["deployments", "pods", "services", "replicasets", "secrets"]
+  verbs:     ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tester-account-binding
+  namespace: test
+subjects:
+- kind: ServiceAccount
+  name: tester-account
+  namespace: test
+roleRef:
+  kind: ClusterRole
+  name: tester-account
+  apiGroup: ""
